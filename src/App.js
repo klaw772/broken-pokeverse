@@ -44,7 +44,6 @@ function App() {
                 value={search}
                 aria-label='search'
                 aria-describedby='search'
-                onChange={(e) => setSearch(e.target.value)}
               />
             </InputGroup>
           </Col>
@@ -53,7 +52,7 @@ function App() {
         <Row className='g-4'>
           {filteredPokemon.map((pokemon) => (
             <Col key={pokemon.name}>
-              <PokemonCard url={pokemon.url} name={pokemon.name} />
+              <PokemonCard name={pokemon.name} />
             </Col>
           ))}
         </Row>

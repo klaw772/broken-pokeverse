@@ -22,14 +22,14 @@ function PokemonCard({ url, name }) {
         height='286'
         bg='dark'
         variant='top'
-        src={pokemon?.sprites.front_default}
+        src={pokemon.sprites}
       />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text as='div'>
           Abilities:
           <ul>
-            {pokemon?.abilities.map((ability) => (
+            {pokemon.abilities.map((ability) => (
               <li key={ability.ability.name}>
                 <span key={ability.ability.name}>{ability.ability.name}</span>
               </li>
